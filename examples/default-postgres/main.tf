@@ -1,19 +1,32 @@
-locals {
-  vpc_id     = "vpc-xxx"
-  subnet_ids = ["subnet-xxx"]
+variable "vpc_id" {
+  description = "The VPC to deploy the RDS instance within"
+  type        = string
 }
 
-module "instance" {
+variable "subnet_ids" {
+  description = "The list of subnets to deploy the RDS instance across"
+  type        = list(string)
+}
+
+module "postgres" {
   source = "../../"
 
-  name        = "test-rds-instance"
-  vpc_id      = local.vpc_id
-  subnet_ids  = local.subnet_ids
+  name        = "postgres-instance"
+  vpc_id      = var.vpc_id
+  subnet_ids  = var.subnet_ids
   db_name     = "snowplow"
   db_username = "snowplow"
   db_password = "$N0wPL0W"
 }
 
 output "id" {
-  value = module.instance.id
+  value = module.postgres.id
+}
+
+output "address" {
+  value = module.postgres.address
+}
+
+output "port" {
+  value = module.postgres.port
 }

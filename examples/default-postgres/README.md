@@ -7,8 +7,8 @@ module "instance" {
   source = "snowplow-devops/rds/aws"
 
   name        = "test-rds-instance"
-  vpc_id      = local.vpc_id
-  subnet_ids  = local.subnet_ids
+  vpc_id      = var.vpc_id
+  subnet_ids  = var.subnet_ids
   db_name     = "snowplow"
   db_username = "snowplow"
   db_password = "$N0wPL0W"
