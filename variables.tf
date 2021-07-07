@@ -62,7 +62,7 @@ variable "allocated_storage" {
 variable "max_allocated_storage" {
   description = "The maximum size of the attached disk in GB - if set higher than allocated_storage will enable auto-scaling"
   type        = number
-  default     = 10
+  default     = 0
 }
 
 variable "deletion_protection" {
