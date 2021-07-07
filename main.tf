@@ -54,11 +54,22 @@ resource "aws_db_instance" "instance" {
   copy_tags_to_snapshot     = true
 
   publicly_accessible    = var.publicly_accessible
-  vpc_security_group_ids = [aws_security_group.sg.id]
+  vpc_security_group_ids = compact(concat([aws_security_group.sg.id], var.additional_security_group_ids))
   ca_cert_identifier     = "rds-ca-2019"
 
   deletion_protection = var.deletion_protection
   apply_immediately   = true
 
   tags = local.tags
+}
+
+resource "aws_security_group_rule" "ingress_rds" {
+  count = length(var.additional_ip_allowlist) > 0 ? 1 : 0
+
+  type              = "ingress"
+  from_port         = aws_db_instance.instance.port
+  to_port           = aws_db_instance.instance.port
+  protocol          = "tcp"
+  cidr_blocks       = compact(var.additional_ip_allowlist)
+  security_group_id = aws_security_group.sg.id
 }

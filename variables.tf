@@ -95,6 +95,18 @@ variable "multi_az" {
   default     = false
 }
 
+variable "additional_ip_allowlist" {
+  description = "An optional list of CIDR ranges to allow traffic from"
+  type        = list(any)
+  default     = []
+}
+
+variable "additional_security_group_ids" {
+  description = "An optional list of security groups to attach to the RDS instance"
+  type        = list(any)
+  default     = []
+}
+
 variable "tags" {
   description = "The tags to append to this resource"
   default     = {}
