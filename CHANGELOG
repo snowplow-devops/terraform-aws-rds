@@ -1,3 +1,7 @@
+Version 0.1.2 (2021-07-07)
+--------------------------
+Default max_allocated_storage to 0 so that auto-scaling is disabled (#2)
+
 Version 0.1.1 (2021-07-06)
 --------------------------
 Allow Postgres example to be used directly (#1)
