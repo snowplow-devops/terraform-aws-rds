@@ -118,3 +118,9 @@ variable "monitoring_interval" {
   default     = 0
   type        = number
 }
+
+variable "monitoring_role_arn" {
+  description = "The ARN for the IAM role that permits RDS to send enhanced monitoring metrics to CloudWatch Logs."
+  default     = ""
+  type        = string
+}

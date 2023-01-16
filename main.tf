@@ -61,6 +61,7 @@ resource "aws_db_instance" "instance" {
   apply_immediately   = true
 
   monitoring_interval = var.monitoring_interval
+  monitoring_role_arn = var.monitoring_role_arn
   
   tags = local.tags
 }
