@@ -60,6 +60,8 @@ resource "aws_db_instance" "instance" {
   deletion_protection = var.deletion_protection
   apply_immediately   = true
 
+  monitoring_interval = var.monitoring_interval
+  
   tags = local.tags
 }
 
