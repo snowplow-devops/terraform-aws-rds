@@ -62,6 +62,8 @@ resource "aws_db_instance" "instance" {
 
   monitoring_interval = var.monitoring_interval
   monitoring_role_arn = var.monitoring_role_arn
+
+  enabled_cloudwatch_logs_exports = var.enabled_cloudwatch_logs_exports
   
   tags = local.tags
 }
