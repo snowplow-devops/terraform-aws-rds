@@ -112,3 +112,21 @@ variable "tags" {
   default     = {}
   type        = map(string)
 }
+
+variable "monitoring_interval" {
+  description = "The interval, in seconds, between points when Enhanced Monitoring metrics are collected for the DB instance. Valid Values: 0, 1, 5, 10, 15, 30, 60."
+  default     = 0
+  type        = number
+}
+
+variable "monitoring_role_arn" {
+  description = "The ARN for the IAM role that permits RDS to send enhanced monitoring metrics to CloudWatch Logs."
+  default     = ""
+  type        = string
+}
+
+variable "enabled_cloudwatch_logs_exports" {
+  description = "A list of log types to enable for exporting to CloudWatch Logs. Valid values for postgres are: postgresql and upgrade. See https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_LogAccess.Concepts.PostgreSQL.html."
+  default     = []
+  type        = list(string)
+}
