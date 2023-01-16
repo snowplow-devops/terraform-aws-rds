@@ -125,7 +125,7 @@ variable "monitoring_role_arn" {
   type        = string
 }
 
-variable "enable_cloudwatch_logs_exports" {
+variable "enabled_cloudwatch_logs_exports" {
   description = "A list of log types to enable for exporting to CloudWatch Logs"
   default     = []
   type        = list(string)
