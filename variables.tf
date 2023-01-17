@@ -126,7 +126,7 @@ variable "monitoring_role_arn" {
 }
 
 variable "enabled_cloudwatch_logs_exports" {
-  description = "A list of log types to enable for exporting to CloudWatch Logs"
+  description = "A list of log types to enable for exporting to CloudWatch Logs. Valid values for postgres are: postgresql and upgrade. See https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_LogAccess.Concepts.PostgreSQL.html."
   default     = []
   type        = list(string)
 }
