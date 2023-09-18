@@ -55,7 +55,7 @@ resource "aws_db_instance" "instance" {
 
   publicly_accessible    = var.publicly_accessible
   vpc_security_group_ids = compact(concat([aws_security_group.sg.id], var.additional_security_group_ids))
-  ca_cert_identifier     = "rds-ca-2019"
+  ca_cert_identifier     = var.ca_cert_identifier
 
   deletion_protection = var.deletion_protection
   apply_immediately   = true

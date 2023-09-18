@@ -63,6 +63,7 @@ No modules.
 | <a name="input_allocated_storage"></a> [allocated\_storage](#input\_allocated\_storage) | The size of the attached disk in GB | `number` | `10` | no |
 | <a name="input_auto_minor_version_upgrade"></a> [auto\_minor\_version\_upgrade](#input\_auto\_minor\_version\_upgrade) | Whether to automatically upgrade minor versions | `bool` | `true` | no |
 | <a name="input_backup_retention_period"></a> [backup\_retention\_period](#input\_backup\_retention\_period) | The number of days to retain backups | `number` | `7` | no |
+| <a name="input_ca_cert_identifier"></a> [ca\_cert\_identifier](#input\_ca\_cert\_identifier) | Identifier of the CA certificate for the DB instance. Example: `rds-ca-2019`, `rds-ca-rsa2048-g1`, `rds-ca-ecc384-g1`, or `rds-ca-rsa4096-g1`. | `string` | `"rds-ca-2019"` | no |
 | <a name="input_deletion_protection"></a> [deletion\_protection](#input\_deletion\_protection) | Whether to protect the RDS from accidental termination | `bool` | `false` | no |
 | <a name="input_enabled_cloudwatch_logs_exports"></a> [enabled\_cloudwatch\_logs\_exports](#input\_enabled\_cloudwatch\_logs\_exports) | A list of log types to enable for exporting to CloudWatch Logs. Valid values for postgres are: postgresql and upgrade. See https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_LogAccess.Concepts.PostgreSQL.html. | `list(string)` | `[]` | no |
 | <a name="input_engine"></a> [engine](#input\_engine) | The engine type to use in the RDS instance | `string` | `"postgres"` | no |
