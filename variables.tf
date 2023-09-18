@@ -53,6 +53,12 @@ variable "publicly_accessible" {
   default     = false
 }
 
+variable "ca_cert_identifier" {
+  description = "Identifier of the CA certificate for the DB instance. Example: `rds-ca-2019`, `rds-ca-rsa2048-g1`, `rds-ca-ecc384-g1`, or `rds-ca-rsa4096-g1`."
+  type        = string
+  default     = "rds-ca-2019"
+}
+
 variable "allocated_storage" {
   description = "The size of the attached disk in GB"
   type        = number
