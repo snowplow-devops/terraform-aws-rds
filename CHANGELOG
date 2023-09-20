@@ -1,3 +1,7 @@
+Version 0.5.0 (2023-09-21)
+--------------------------
+Add ability to choose CA certificate identifier (#16)
+
 Version 0.4.0 (2023-06-22)
 --------------------------
 Name for db_name is deprecated (#11)
