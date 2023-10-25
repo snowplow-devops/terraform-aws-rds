@@ -1,6 +1,6 @@
 output "id" {
   description = "ID of the RDS instance"
-  value       = aws_db_instance.instance.id
+  value       = aws_db_instance.instance.identifier
 }
 
 output "address" {
