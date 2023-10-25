@@ -83,7 +83,7 @@ No modules.
 |------|-------------|
 | <a name="output_address"></a> [address](#output\_address) | Address which the RDS instance is bound to |
 | <a name="output_id"></a> [id](#output\_id) | Resource ID of the RDS instance |
-| <a name="output_identifier"></a> [id](#output\_identifier) | Identifier of the RDS instance |
+| <a name="output_identifier"></a> [id](#output\_identifier) | Instance ID of the RDS instance |
 | <a name="output_port"></a> [port](#output\_port) | Port which the RDS instance exposes (e.g. 5432) |
 | <a name="output_sg_id"></a> [sg\_id](#output\_sg\_id) | ID of the security group attached to the RDS instance |
 
