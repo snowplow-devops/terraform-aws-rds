@@ -1,5 +1,10 @@
 output "id" {
-  description = "ID of the RDS instance"
+  description = "Resource ID of the RDS instance"
+  value       = aws_db_instance.instance.id
+}
+
+output "identifier" {
+  description = "Instance ID of the RDS instance"
   value       = aws_db_instance.instance.identifier
 }
 
