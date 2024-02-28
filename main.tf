@@ -36,6 +36,8 @@ resource "aws_db_instance" "instance" {
 
   engine = var.engine
 
+  parameter_group_name = var.parameter_group_name
+
   instance_class = var.instance_class
   multi_az       = var.multi_az
 

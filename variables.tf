@@ -113,6 +113,12 @@ variable "additional_security_group_ids" {
   default     = []
 }
 
+variable "parameter_group_name" {
+  description = "Name of the DB parameter group to associate"
+  type        = string
+  default     = ""
+}
+
 variable "tags" {
   description = "The tags to append to this resource"
   default     = {}
