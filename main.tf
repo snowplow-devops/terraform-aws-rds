@@ -36,6 +36,8 @@ resource "aws_db_instance" "instance" {
 
   engine = var.engine
 
+  parameter_group_name = var.parameter_group_name
+
   instance_class = var.instance_class
   multi_az       = var.multi_az
 
@@ -44,7 +46,7 @@ resource "aws_db_instance" "instance" {
   port     = var.port
   username = var.db_username
 
-  storage_type          = "gp2"
+  storage_type          = var.storage_type
   allocated_storage     = var.allocated_storage
   max_allocated_storage = var.max_allocated_storage
   storage_encrypted     = true

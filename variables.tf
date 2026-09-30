@@ -113,6 +113,12 @@ variable "additional_security_group_ids" {
   default     = []
 }
 
+variable "parameter_group_name" {
+  description = "Name of the DB parameter group to associate"
+  type        = string
+  default     = ""
+}
+
 variable "tags" {
   description = "The tags to append to this resource"
   default     = {}
@@ -135,4 +141,10 @@ variable "enabled_cloudwatch_logs_exports" {
   description = "A list of log types to enable for exporting to CloudWatch Logs. Valid values for postgres are: postgresql and upgrade. See https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_LogAccess.Concepts.PostgreSQL.html."
   default     = []
   type        = list(string)
+}
+
+variable "storage_type" {
+  description = "The type of storage to use"
+  type        = string
+  default     = "gp2"
 }

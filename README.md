@@ -75,6 +75,7 @@ No modules.
 | <a name="input_port"></a> [port](#input\_port) | The port to deploy the database on | `number` | `5432` | no |
 | <a name="input_publicly_accessible"></a> [publicly\_accessible](#input\_publicly\_accessible) | Whether to make this instance accessible over the internet | `bool` | `false` | no |
 | <a name="input_snapshot_identifier"></a> [snapshot\_identifier](#input\_snapshot\_identifier) | The identifier of a snapshot to restore from | `string` | `""` | no |
+| <a name="input_parameter_group_name"></a> [parameter\_group\_name](#input\_parameter\_group\_name) | Name of the DB parameter group to associate. | `string` | `""` | no |
 | <a name="input_tags"></a> [tags](#input\_tags) | The tags to append to this resource | `map(string)` | `{}` | no |
 
 ## Outputs
@@ -82,7 +83,8 @@ No modules.
 | Name | Description |
 |------|-------------|
 | <a name="output_address"></a> [address](#output\_address) | Address which the RDS instance is bound to |
-| <a name="output_id"></a> [id](#output\_id) | ID of the RDS instance |
+| <a name="output_id"></a> [id](#output\_id) | Resource ID of the RDS instance |
+| <a name="output_identifier"></a> [id](#output\_identifier) | Instance ID of the RDS instance |
 | <a name="output_port"></a> [port](#output\_port) | Port which the RDS instance exposes (e.g. 5432) |
 | <a name="output_sg_id"></a> [sg\_id](#output\_sg\_id) | ID of the security group attached to the RDS instance |
 
