@@ -50,7 +50,8 @@ resource "aws_db_instance" "instance" {
   storage_encrypted     = true
 
   snapshot_identifier       = var.snapshot_identifier
-  final_snapshot_identifier = "${var.name}-${random_string.snapshot_id_suffix.result}"
+  skip_final_snapshot       = var.skip_final_snapshot
+  final_snapshot_identifier = var.skip_final_snapshot ? null : "${var.name}-${random_string.snapshot_id_suffix.result}"
   copy_tags_to_snapshot     = true
 
   publicly_accessible    = var.publicly_accessible

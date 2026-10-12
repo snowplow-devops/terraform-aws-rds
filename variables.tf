@@ -77,6 +77,12 @@ variable "deletion_protection" {
   default     = false
 }
 
+variable "skip_final_snapshot" {
+  description = "Whether to skip taking a final snapshot when the RDS instance is destroyed"
+  type        = bool
+  default     = false
+}
+
 variable "snapshot_identifier" {
   description = "The identifier of a snapshot to restore from"
   type        = string
