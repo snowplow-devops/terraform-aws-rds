@@ -1,3 +1,7 @@
+Version 0.6.0 (2026-10-12)
+--------------------------
+Add skip_final_snapshot input to allow destroying without a final snapshot (#24)
+
 Version 0.5.1 (2026-09-26)
 --------------------------
 Update GitHub Actions to Node 24 and pin to commit SHAs
